@@ -8,6 +8,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
+<script>
+(function () {
+  const url = new URL(window.location.href);
+
+  if (url.searchParams.has("utm_source")) {
+    url.searchParams.delete("utm_source");
+    window.history.replaceState(
+      window.history.state,
+      "",
+      url.pathname + url.search + url.hash
+    );
+  }
+})();
+</script>
+
 <body>
 <header class="header">
 <a class="brand" href="#inicio"><img src="assets/on7-logo.png" alt="Logo oficial Time ON7 Esports"></a>
