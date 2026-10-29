@@ -29,3 +29,20 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
 .player-link-label{font-size:10px;font-weight:800;letter-spacing:1.5px;color:#bbb}
 .player-instagram:hover .player-link-label{color:#fff}
 @media(max-width:620px){.player-instagram{width:100%;min-width:0}}
+
+
+/* Seção final ON7 Nation: grupo de divulgação de treinos, separado da marca ON7 Esports. */
+.nation-section{position:relative;isolation:isolate;display:grid;grid-template-columns:1fr .8fr;gap:8%;align-items:center;padding:76px clamp(24px,7vw,100px);border-top:1px solid #292929;background:#080808;overflow:hidden}
+.nation-section:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#050505f5 0%,#050505e8 48%,#05050570 100%);z-index:-1}
+.nation-copy h2{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(42px,5vw,64px);line-height:.95;margin:0 0 18px;font-weight:900}
+.nation-copy h2 span{color:#aaa}
+.nation-copy>p:not(.eyebrow){max-width:570px;color:#c5c5c5;font-size:14px;line-height:1.8}
+.nation-btn{display:inline-block;margin-top:14px;padding:13px 18px;background:#f1f1f1;color:#080808;font-size:10px;font-weight:900;letter-spacing:1px;text-decoration:none}
+.nation-btn:hover{background:#ccc}
+.nation-mark{min-height:290px;padding:28px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;border:1px solid #444;background:radial-gradient(ellipse at 75% 45%,#252525 0%,#101010 45%,#050505 80%);overflow:hidden;position:relative}
+.nation-mark:after{content:"7";position:absolute;right:-12px;bottom:-85px;font-family:'Barlow Condensed',Impact,sans-serif;font-size:330px;font-weight:900;line-height:1;color:#ffffff08;pointer-events:none}
+.nation-mark-small,.nation-mark-tag{font-size:9px;font-weight:800;letter-spacing:3px;color:#aaa;position:relative;z-index:1}
+.nation-mark strong{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(76px,10vw,120px);line-height:.8;font-weight:900;letter-spacing:-5px;position:relative;z-index:1}
+.nation-mark-esports{font-family:'Barlow Condensed',Impact,sans-serif;font-size:28px;font-weight:700;letter-spacing:10px;margin:12px 0 0;position:relative;z-index:1}
+.nation-mark-line{width:72px;height:4px;background:#fff;margin:18px 0;position:relative;z-index:1}
+@media(max-width:620px){.nation-section{grid-template-columns:1fr;gap:28px;padding:52px 24px}.nation-mark{min-height:230px}.nation-mark:after{font-size:250px;bottom:-65px}}
