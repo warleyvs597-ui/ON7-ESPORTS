@@ -26,6 +26,7 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
 .player-instagram{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:190px;padding:16px 20px;background:#101010;border:1px solid #555;color:#fff;text-decoration:none;transition:background .2s,border-color .2s}
 .player-instagram:hover{background:#202020;border-color:#fff}
 .dark-player{position:relative;isolation:isolate;overflow:hidden;background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/972siUG.png");background-size:cover;background-position:center;background-repeat:no-repeat}.dark-player:hover{background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/972siUG.png")}
+.kaue-player{position:relative;isolation:isolate;overflow:hidden;background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/Mi3lr4v.png");background-size:cover;background-position:center;background-repeat:no-repeat}.kaue-player:hover{background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/Mi3lr4v.png")}
 .player-role{font-size:9px;font-weight:800;letter-spacing:2px;color:#aaa;text-transform:uppercase}.player-name{font-family:'Barlow Condensed',Impact,sans-serif;font-size:25px;font-weight:900;letter-spacing:1px}
 .player-link-label{font-size:10px;font-weight:800;letter-spacing:1.5px;color:#bbb}
 .player-instagram:hover .player-link-label{color:#fff}
