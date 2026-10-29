@@ -159,7 +159,7 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
 
 
 /* Fundo individual do cartão LOCKING. */
-.on7-player-bg{position:relative;isolation:isolate;overflow:hidden;background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/PF2Fd1z.png");background-size:cover;background-position:center 12%;background-repeat:no-repeat;color:#fff;text-decoration:none}
+.on7-player-bg{position:relative;isolation:isolate;overflow:hidden;background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/PF2Fd1z.png");background-size:cover;background-position:center top;background-repeat:no-repeat;color:#fff;text-decoration:none}
 .on7-player-bg:hover{background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/PF2Fd1z.png");background-color:#101010;border-color:#555}
 
 
@@ -169,14 +169,14 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
 
 
 /* Fotos individuais de ALEX, VITOR e ISACK, com enquadramento priorizando o rosto. */
-.alex-player{background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/5s0UFXE.png");background-size:cover;background-position:center 22%;background-repeat:no-repeat}
-.vitor-player{background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/ekQGDd9.png");background-size:cover;background-position:center 22%;background-repeat:no-repeat}
-.isack-player{background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/noXahp2.png");background-size:cover;background-position:center 22%;background-repeat:no-repeat}
+.alex-player{background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/5s0UFXE.png");background-size:cover;background-position:center top;background-repeat:no-repeat}
+.vitor-player{background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/ekQGDd9.png");background-size:cover;background-position:center top;background-repeat:no-repeat}
+.isack-player{background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/noXahp2.png");background-size:cover;background-position:center top;background-repeat:no-repeat}
 .alex-player:hover{background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/5s0UFXE.png")}
 .vitor-player:hover{background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/ekQGDd9.png")}
 .isack-player:hover{background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/noXahp2.png")}
 @media(max-width:620px){
- .alex-player{background-position:center 16%}
- .vitor-player{background-position:center 16%}
- .isack-player{background-position:center 16%}
+ .alex-player{background-position:center top}
+ .vitor-player{background-position:center top}
+ .isack-player{background-position:center top}
 }
