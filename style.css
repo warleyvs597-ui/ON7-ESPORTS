@@ -79,3 +79,61 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
  .confirmed-slide img{height:auto;width:auto;max-height:68vh;max-width:calc(100vw - 92px);object-fit:contain}
  .confirmed-track{gap:10px}
 }
+
+
+/* Melhorias exclusivas para celular: o layout de computador permanece inalterado. */
+@media (max-width:620px){
+  body{font-size:15px;overflow-x:hidden}
+  .header{height:64px;padding:0 16px;gap:10px}
+  .brand img{width:46px;height:46px}
+  .ig{font-size:8px;letter-spacing:.7px}
+  .menu-toggle{padding:8px 10px;font-size:12px}
+  .nav{top:63px;padding:14px 18px;gap:0;box-shadow:0 12px 24px #0009}
+  .nav a{padding:12px 0;border-bottom:1px solid #242424;font-size:12px}
+  .nav a:last-child{border-bottom:0}
+  .hero{min-height:500px;padding:58px 20px 88px;align-items:flex-end}
+  .hero-bg{inset:0}
+  .hero-bg img{object-position:60% center;opacity:.58}
+  .shade{background:linear-gradient(0deg,#050505 0%,#050505c9 40%,#05050555 100%)}
+  .hero-copy{max-width:100%}
+  .hero h1{font-size:clamp(42px,12vw,54px);line-height:.94;margin-bottom:16px}
+  .hero-copy>p:not(.eyebrow){font-size:13px;line-height:1.7}
+  .eyebrow{font-size:9px;letter-spacing:2.5px}
+  .hero-logo{width:54px;height:54px;right:16px;bottom:14px}
+  .section{padding:44px 18px}
+  .section h2{font-size:clamp(34px,9vw,44px);line-height:.98;margin-bottom:16px}
+  .section>div>p:not(.eyebrow),.intro{font-size:13px;line-height:1.75}
+  .about{gap:20px}
+  .logo-panel img{width:min(72%,230px);padding:6px}
+  .team-photo{height:auto;max-height:58vh;object-fit:contain;object-position:center;background:#050505}
+  .small-note{line-height:1.6}
+  .jersey-section{gap:18px}
+  .jersey{max-height:360px}
+  .player-links{gap:10px;margin-top:16px}
+  .player-instagram{padding:14px 16px}
+  .player-name{font-size:23px}
+  .stat-grid{margin-top:22px}
+  .stat-grid div{padding:15px 4px}
+  .stat-grid b{font-size:34px}
+  .stat-grid small{font-size:7px;letter-spacing:.5px;line-height:1.4}
+  #conquistas{padding-left:14px;padding-right:14px}
+  .achievement{min-height:132px;margin-bottom:10px;padding:20px 16px;gap:12px;background-position:center;background-size:cover}
+  .achievement b{font-size:27px;flex:0 0 auto}
+  .achievement p{font-size:12px;line-height:1.4}
+  .confirmed-section{padding-left:12px;padding-right:12px}
+  .confirmed-intro{font-size:12px;line-height:1.7;margin-bottom:18px}
+  .confirmed-carousel{grid-template-columns:28px minmax(0,1fr) 28px;gap:5px}
+  .confirmed-arrow{width:28px;height:36px;font-size:22px;border-radius:3px}
+  .confirmed-track{gap:8px;padding:8px 0 12px;scroll-padding-inline:0}
+  .confirmed-slide{max-width:100%;scroll-snap-align:center}
+  .confirmed-slide img{display:block;max-width:100%;max-height:62vh;width:auto;height:auto;object-fit:contain;border-color:#333}
+  .confirmed-counter{font-size:10px;margin-top:6px}
+  .nation-section{padding:44px 18px;gap:22px}
+  .nation-copy h2{font-size:clamp(40px,11vw,52px)}
+  .nation-copy>p:not(.eyebrow){font-size:13px;line-height:1.75}
+  .nation-btn{display:block;width:100%;text-align:center;padding:14px 10px;line-height:1.5}
+  .nation-mark{height:auto;aspect-ratio:1.35;max-height:250px}
+  .contact{padding:48px 18px}
+  .contact h2{font-size:42px}
+  footer{padding:18px;gap:10px;font-size:9px;line-height:1.6}
+}
