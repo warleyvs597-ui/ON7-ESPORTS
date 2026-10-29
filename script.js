@@ -55,8 +55,9 @@ if (confirmedTrack) {
     if (!slides.length) return;
     confirmedTargetIndex = Math.max(0, Math.min(slides.length - 1, index));
     const slide = slides[confirmedTargetIndex];
+    const centeredLeft = slide.offsetLeft + slide.offsetWidth / 2 - confirmedTrack.clientWidth / 2;
     confirmedTrack.scrollTo({
-      left: slide.offsetLeft - confirmedTrack.offsetLeft,
+      left: Math.max(0, centeredLeft),
       behavior: 'smooth'
     });
   };
@@ -76,4 +77,5 @@ if (confirmedTrack) {
     updateConfirmedCounter();
   });
   updateConfirmedCounter();
+  requestAnimationFrame(() => goToConfirmed(0));
 }
