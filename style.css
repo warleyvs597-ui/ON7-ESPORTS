@@ -50,3 +50,24 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
 .nation-mark-esports{font-family:'Barlow Condensed',Impact,sans-serif;font-size:28px;font-weight:700;letter-spacing:10px;margin:12px 0 0;position:relative;z-index:1}
 .nation-mark-line{width:72px;height:4px;background:#fff;margin:18px 0;position:relative;z-index:1}
 @media(max-width:620px){.nation-section{grid-template-columns:1fr;gap:28px;padding:52px 24px}.nation-mark{height:230px}}
+
+
+/* Carrossel responsivo de campeonatos confirmados da ON7. */
+.confirmed-section{background:#090909}
+.confirmed-intro{max-width:620px;color:#aaa;font-size:13px;margin:0 0 24px}
+.confirmed-carousel{display:grid;grid-template-columns:46px minmax(0,1fr) 46px;align-items:center;gap:14px}
+.confirmed-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:8px 2px 16px}
+.confirmed-track::-webkit-scrollbar{display:none}
+.confirmed-slide{flex:0 0 min(78%,760px);height:clamp(220px,48vw,490px);display:flex;align-items:center;justify-content:center;scroll-snap-align:center;background:#050505;border:1px solid #333;overflow:hidden}
+.confirmed-slide img{display:block;width:100%;height:100%;object-fit:contain}
+.confirmed-fallback{padding:24px;text-align:center;color:#bbb;font-size:12px}
+.confirmed-fallback a{display:block;margin-top:10px;color:#fff;text-decoration:underline}
+.confirmed-arrow{width:44px;height:44px;border:1px solid #666;background:#111;color:#fff;font-size:32px;line-height:1;cursor:pointer}
+.confirmed-arrow:hover{background:#eee;color:#080808;border-color:#eee}
+.confirmed-counter{text-align:center;color:#888;font-size:10px;letter-spacing:2px;margin-top:8px}
+@media(max-width:620px){
+ .confirmed-carousel{grid-template-columns:32px minmax(0,1fr) 32px;gap:7px}
+ .confirmed-arrow{width:32px;height:38px;font-size:25px}
+ .confirmed-slide{flex-basis:100%;height:330px}
+ .confirmed-track{gap:10px}
+}
