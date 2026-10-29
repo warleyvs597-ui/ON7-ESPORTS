@@ -181,28 +181,23 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
  .isack-player{background-position:center -30px}
 }
 
-/* Ajuste final dos fundos: escurece LOCKING/ALEX e reposiciona VITOR/ISACK. */
+/* Correção: escurecimento uniforme em LOCKING/ALEX e fotos de VITOR/ISACK mais acima. */
 .on7-player-bg:not(.alex-player):not(.vitor-player):not(.isack-player){
- background-image:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.86)),url("https://i.imgur.com/PF2Fd1z.png");
+ background-image:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.78)),url("https://i.imgur.com/PF2Fd1z.png");
 }
 .on7-player-bg:not(.alex-player):not(.vitor-player):not(.isack-player):hover{
- background-image:linear-gradient(90deg,rgba(0,0,0,.93),rgba(0,0,0,.82)),url("https://i.imgur.com/PF2Fd1z.png");
+ background-image:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),url("https://i.imgur.com/PF2Fd1z.png");
 }
 .alex-player{
- background-image:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.86)),url("https://i.imgur.com/5s0UFXE.png");
+ background-image:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.78)),url("https://i.imgur.com/5s0UFXE.png");
+ background-position:center -30px;
 }
 .alex-player:hover{
- background-image:linear-gradient(90deg,rgba(0,0,0,.93),rgba(0,0,0,.82)),url("https://i.imgur.com/5s0UFXE.png");
+ background-image:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),url("https://i.imgur.com/5s0UFXE.png");
 }
-.vitor-player{
- background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/ekQGDd9.png");
- background-position:center -65px;
-}
-.isack-player{
- background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/noXahp2.png");
- background-position:center -65px;
-}
+.vitor-player{background-position:center -110px}
+.isack-player{background-position:center -110px}
 @media(max-width:620px){
- .vitor-player{background-position:center -65px}
- .isack-player{background-position:center -65px}
+ .vitor-player{background-position:center -110px}
+ .isack-player{background-position:center -110px}
 }
