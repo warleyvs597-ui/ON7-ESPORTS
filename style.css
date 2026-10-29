@@ -156,3 +156,8 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
  .player-name{font-size:23px}
  .player-role{font-size:9px;letter-spacing:2px}
 }
+
+
+/* Fundo ON7 compartilhado por LOCKING, ALEX, VITOR e ISACK. */
+.on7-player-bg{position:relative;isolation:isolate;overflow:hidden;background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/F8JBKl2.png");background-size:cover;background-position:center;background-repeat:no-repeat;color:#fff;text-decoration:none}
+.on7-player-bg:hover{background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/F8JBKl2.png");background-color:#101010;border-color:#555}
