@@ -41,10 +41,10 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
 .nation-btn:hover{background:#ccc}
 .nation-mark{height:290px;min-height:0;padding:0;display:flex;align-items:stretch;justify-content:stretch;border:0;background:transparent;overflow:hidden;position:relative;border-radius:0}
 .nation-mark img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center;border:0;border-radius:0;margin:0}
-.nation-mark img{display:block;width:100%;max-width:300px;max-height:240px;object-fit:contain;position:relative;z-index:1;margin:auto}
-.nation-mark:after{content:"7";position:absolute;right:-12px;bottom:-85px;font-family:'Barlow Condensed',Impact,sans-serif;font-size:330px;font-weight:900;line-height:1;color:#ffffff08;pointer-events:none}
+
+
 .nation-mark-small,.nation-mark-tag{font-size:9px;font-weight:800;letter-spacing:3px;color:#aaa;position:relative;z-index:1}
 .nation-mark strong{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(76px,10vw,120px);line-height:.8;font-weight:900;letter-spacing:-5px;position:relative;z-index:1}
 .nation-mark-esports{font-family:'Barlow Condensed',Impact,sans-serif;font-size:28px;font-weight:700;letter-spacing:10px;margin:12px 0 0;position:relative;z-index:1}
 .nation-mark-line{width:72px;height:4px;background:#fff;margin:18px 0;position:relative;z-index:1}
-@media(max-width:620px){.nation-section{grid-template-columns:1fr;gap:28px;padding:52px 24px}.nation-mark{height:230px}.nation-mark:after{font-size:250px;bottom:-65px}}
+@media(max-width:620px){.nation-section{grid-template-columns:1fr;gap:28px;padding:52px 24px}.nation-mark{height:230px}}
