@@ -180,3 +180,12 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
  .vitor-player{background-position:center -30px}
  .isack-player{background-position:center -30px}
 }
+
+/* Escurece LOCKING e ALEX para igualar o tom dos demais cartões. */
+.on7-player-bg{background-image:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.82)),url("https://i.imgur.com/PF2Fd1z.png")}
+.on7-player-bg:hover{background-image:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.76)),url("https://i.imgur.com/PF2Fd1z.png")}
+.alex-player{background-image:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.82)),url("https://i.imgur.com/5s0UFXE.png")}
+.alex-player:hover{background-image:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.76)),url("https://i.imgur.com/5s0UFXE.png")}
+
+@media(min-width:621px){.vitor-player,.isack-player{background-position:center 18px}}
+@media(max-width:620px){.vitor-player,.isack-player{background-position:center 18px}}
