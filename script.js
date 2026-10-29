@@ -50,10 +50,10 @@ if (confirmedTrack) {
     confirmedCounter.textContent = String(nearest + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
   };
   document.querySelector('.confirmed-prev')?.addEventListener('click', () => {
-    confirmedTrack.scrollBy({left: -confirmedTrack.clientWidth * 0.82, behavior: 'smooth'});
+    confirmedTrack.scrollTo({left: confirmedTrack.children[Math.max(0, confirmedIndex - 1)]?.offsetLeft ?? 0, behavior: 'smooth'});
   });
   document.querySelector('.confirmed-next')?.addEventListener('click', () => {
-    confirmedTrack.scrollBy({left: confirmedTrack.clientWidth * 0.82, behavior: 'smooth'});
+    confirmedTrack.scrollTo({left: confirmedTrack.children[Math.min(confirmedTrack.children.length - 1, confirmedIndex + 1)]?.offsetLeft ?? confirmedTrack.scrollLeft, behavior: 'smooth'});
   });
   confirmedTrack.addEventListener('scroll', updateConfirmedCounter, {passive:true});
   window.addEventListener('resize', updateConfirmedCounter);
