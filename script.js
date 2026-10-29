@@ -6,6 +6,7 @@ const confirmedTrack = document.getElementById('confirmed-track');
 const confirmedCounter = document.getElementById('confirmed-counter');
 if (confirmedTrack) {
   let confirmedIndex = 0;
+  let confirmedTargetIndex = 0;
   const imageExtensions = ['.jpg', '.png', '.jpeg', '.webp', '.gif'];
   CONFIRMED_IMG_IDS.forEach((id, index) => {
     const slide = document.createElement('div');
@@ -49,13 +50,30 @@ if (confirmedTrack) {
     confirmedIndex = nearest;
     confirmedCounter.textContent = String(nearest + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
   };
+  const goToConfirmed = (index) => {
+    const slides = Array.from(confirmedTrack.children);
+    if (!slides.length) return;
+    confirmedTargetIndex = Math.max(0, Math.min(slides.length - 1, index));
+    const slide = slides[confirmedTargetIndex];
+    confirmedTrack.scrollTo({
+      left: slide.offsetLeft - confirmedTrack.offsetLeft,
+      behavior: 'smooth'
+    });
+  };
   document.querySelector('.confirmed-prev')?.addEventListener('click', () => {
-    confirmedTrack.scrollTo({left: confirmedTrack.children[Math.max(0, confirmedIndex - 1)]?.offsetLeft ?? 0, behavior: 'smooth'});
+    goToConfirmed(confirmedTargetIndex - 1);
   });
   document.querySelector('.confirmed-next')?.addEventListener('click', () => {
-    confirmedTrack.scrollTo({left: confirmedTrack.children[Math.min(confirmedTrack.children.length - 1, confirmedIndex + 1)]?.offsetLeft ?? confirmedTrack.scrollLeft, behavior: 'smooth'});
+    goToConfirmed(confirmedTargetIndex + 1);
   });
   confirmedTrack.addEventListener('scroll', updateConfirmedCounter, {passive:true});
-  window.addEventListener('resize', updateConfirmedCounter);
+  confirmedTrack.addEventListener('scrollend', () => {
+    updateConfirmedCounter();
+    confirmedTargetIndex = confirmedIndex;
+  });
+  window.addEventListener('resize', () => {
+    goToConfirmed(confirmedTargetIndex);
+    updateConfirmedCounter();
+  });
   updateConfirmedCounter();
 }
