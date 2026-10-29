@@ -201,3 +201,18 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
  .vitor-player{background-position:center -110px}
  .isack-player{background-position:center -110px}
 }
+
+
+/* Mesma camada preta uniforme nos fundos de VITOR e ISACK. */
+.vitor-player{
+ background-image:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.78)),url("https://i.imgur.com/ekQGDd9.png");
+}
+.vitor-player:hover{
+ background-image:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),url("https://i.imgur.com/ekQGDd9.png");
+}
+.isack-player{
+ background-image:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.78)),url("https://i.imgur.com/noXahp2.png");
+}
+.isack-player:hover{
+ background-image:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),url("https://i.imgur.com/noXahp2.png");
+}
