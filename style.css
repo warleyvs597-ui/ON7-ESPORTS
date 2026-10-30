@@ -234,3 +234,42 @@ footer img{width:46px;height:46px;object-fit:contain;image-rendering:auto;}
 .isack-player:hover{
  background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/F8JBKl2.png") !important;
 }
+
+
+/* Fotos individuais dos cartões LOCKING, ALEX, VITOR e ISACK, no mesmo estilo de DARK e KAUÊ. */
+.on7-player-bg{
+ background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/C151i6r.png") !important;
+ background-size:cover !important;
+ background-position:center !important;
+ background-repeat:no-repeat !important;
+}
+.on7-player-bg:hover{
+ background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/C151i6r.png") !important;
+}
+.alex-player{
+ background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/MhECpLV.png") !important;
+ background-size:cover !important;
+ background-position:center !important;
+ background-repeat:no-repeat !important;
+}
+.alex-player:hover{
+ background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/MhECpLV.png") !important;
+}
+.vitor-player{
+ background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/kVZjEBV.png") !important;
+ background-size:cover !important;
+ background-position:center !important;
+ background-repeat:no-repeat !important;
+}
+.vitor-player:hover{
+ background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/kVZjEBV.png") !important;
+}
+.isack-player{
+ background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),url("https://i.imgur.com/PNqkHzM.png") !important;
+ background-size:cover !important;
+ background-position:center !important;
+ background-repeat:no-repeat !important;
+}
+.isack-player:hover{
+ background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.45)),url("https://i.imgur.com/PNqkHzM.png") !important;
+}
