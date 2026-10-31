@@ -429,3 +429,66 @@ html.on7-custom-cursor-ready,html.on7-custom-cursor-ready *{cursor:auto!importan
 .partnership-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;background:#f1f1f1;color:#080808;text-align:center;font-size:10px;font-weight:900;letter-spacing:1.1px;line-height:1.5;transition:transform .22s ease,background .22s ease,box-shadow .22s ease}
 .partnership-cta:hover{transform:translateY(-3px);background:#fff;box-shadow:0 8px 24px #fff2}
 @media(max-width:620px){.partnership-cta-wrap{margin-top:24px;padding:22px 15px}.partnership-cta{width:100%;padding:13px 12px;font-size:9px}}
+
+
+/* Refinamento das parcerias: logo compacta e conteúdo alinhado no mesmo cartão. */
+.partnerships-slide{
+  max-width:760px;
+  grid-template-columns:1fr;
+  justify-items:center;
+  gap:16px;
+  padding:26px 28px;
+  text-align:center;
+}
+.partnerships-image-wrap{
+  width:min(100%,260px);
+  min-height:0;
+  height:150px;
+  padding:8px;
+  background:transparent;
+  border:0;
+}
+.partnerships-image{
+  width:100%;
+  height:100%;
+  max-height:150px;
+  object-fit:contain;
+}
+.partnerships-image-fallback{
+  display:grid;
+  place-items:center;
+  width:100%;
+  height:100%;
+}
+.partnerships-info{
+  width:100%;
+  align-items:center;
+  gap:14px;
+}
+.partnerships-message{
+  max-width:100%;
+  margin:0;
+  text-align:center;
+  font-size:clamp(18px,2.2vw,25px);
+  line-height:1.25;
+}
+.partnerships-instagram{
+  min-height:42px;
+}
+@media(max-width:620px){
+  .partnerships-slide{
+    grid-template-columns:1fr;
+    padding:18px 14px;
+    gap:12px;
+  }
+  .partnerships-image-wrap{
+    width:min(100%,220px);
+    height:125px;
+    min-height:0;
+    padding:4px;
+  }
+  .partnerships-image{max-height:125px}
+  .partnerships-info{align-items:center;gap:12px}
+  .partnerships-message{font-size:21px}
+  .partnerships-instagram{width:auto;max-width:100%;padding:0 14px}
+}
