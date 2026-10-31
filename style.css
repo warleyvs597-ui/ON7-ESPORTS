@@ -421,3 +421,11 @@ html.on7-custom-cursor-ready,html.on7-custom-cursor-ready *{cursor:auto!importan
  .partnerships-empty{min-height:210px}
  .partnerships-instagram{width:100%;padding:0 10px}
 }
+
+
+/* Convite para novas parcerias ON7 com contato direto pelo WhatsApp. */
+.partnership-cta-wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;margin:30px auto 0;padding:26px 20px;max-width:850px;border:1px solid #444;background:linear-gradient(145deg,#141414,#080808)}
+.partnership-cta-wrap p{margin:0;color:#aaa;font-size:13px}
+.partnership-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 22px;background:#f1f1f1;color:#080808;text-align:center;font-size:10px;font-weight:900;letter-spacing:1.1px;line-height:1.5;transition:transform .22s ease,background .22s ease,box-shadow .22s ease}
+.partnership-cta:hover{transform:translateY(-3px);background:#fff;box-shadow:0 8px 24px #fff2}
+@media(max-width:620px){.partnership-cta-wrap{margin-top:24px;padding:22px 15px}.partnership-cta{width:100%;padding:13px 12px;font-size:9px}}
