@@ -206,3 +206,72 @@ if (resultsTrack && resultsCounter && resultsPrev && resultsNext) {
   });
   renderResult();
 }
+
+
+// Carrossel de parcerias oficiais da ON7.
+// Para adicionar uma parceria, inclua nome, imagem e Instagram neste array.
+const PARTNERSHIPS_DATA = [];
+const partnershipsTrack = document.getElementById('partnerships-track');
+const partnershipsCounter = document.getElementById('partnerships-counter');
+const partnershipsPrev = document.querySelector('.partnerships-prev');
+const partnershipsNext = document.querySelector('.partnerships-next');
+if (partnershipsTrack && partnershipsCounter && partnershipsPrev && partnershipsNext) {
+  let partnershipIndex = 0;
+  const renderPartnership = () => {
+    if (!PARTNERSHIPS_DATA.length) {
+      partnershipsTrack.innerHTML = '<div class="partnerships-empty"><span>ON7</span><strong>NOSSAS PARCERIAS</strong><p>Em breve, novidades e parceiros que fazem parte da nossa história!</p></div>';
+      partnershipsCounter.textContent = '0 PARCERIAS';
+      partnershipsPrev.disabled = true;
+      partnershipsNext.disabled = true;
+      return;
+    }
+    const item = PARTNERSHIPS_DATA[partnershipIndex];
+    const slide = document.createElement('article');
+    slide.className = 'partnerships-slide';
+    const imageWrap = document.createElement('div');
+    imageWrap.className = 'partnerships-image-wrap';
+    const image = document.createElement('img');
+    image.className = 'partnerships-image';
+    image.src = item.image;
+    image.alt = 'Imagem da parceria ' + item.name;
+    image.loading = 'lazy';
+    image.addEventListener('error', () => {
+      const fallback = document.createElement('div');
+      fallback.className = 'partnerships-image-fallback';
+      fallback.textContent = item.name;
+      image.replaceWith(fallback);
+    }, { once: true });
+    imageWrap.appendChild(image);
+    const info = document.createElement('div');
+    info.className = 'partnerships-info';
+    const message = document.createElement('p');
+    message.className = 'partnerships-message';
+    message.append('A ON7 em parceria com a: ');
+    const partnerName = document.createElement('strong');
+    partnerName.textContent = item.name;
+    message.appendChild(partnerName);
+    const instagram = document.createElement('a');
+    instagram.className = 'partnerships-instagram';
+    instagram.href = item.instagram;
+    instagram.target = '_blank';
+    instagram.rel = 'noopener';
+    instagram.textContent = 'VER INSTAGRAM DA PARCERIA ↗';
+    info.append(message, instagram);
+    slide.append(imageWrap, info);
+    partnershipsTrack.replaceChildren(slide);
+    partnershipsCounter.textContent = String(partnershipIndex + 1).padStart(2, '0') + ' / ' + String(PARTNERSHIPS_DATA.length).padStart(2, '0');
+    partnershipsPrev.disabled = PARTNERSHIPS_DATA.length < 2;
+    partnershipsNext.disabled = PARTNERSHIPS_DATA.length < 2;
+  };
+  partnershipsPrev.addEventListener('click', () => {
+    if (!PARTNERSHIPS_DATA.length) return;
+    partnershipIndex = (partnershipIndex - 1 + PARTNERSHIPS_DATA.length) % PARTNERSHIPS_DATA.length;
+    renderPartnership();
+  });
+  partnershipsNext.addEventListener('click', () => {
+    if (!PARTNERSHIPS_DATA.length) return;
+    partnershipIndex = (partnershipIndex + 1) % PARTNERSHIPS_DATA.length;
+    renderPartnership();
+  });
+  renderPartnership();
+}
