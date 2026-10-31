@@ -107,3 +107,68 @@ if (introScreen) {
 
 
 // Efeitos de cursor e iluminação do mouse removidos.
+
+
+// Carrossel dos resultados oficiais da Team ON7.
+// Para publicar um novo campeonato, adicione um item a RESULTS_DATA com a imagem da tabela.
+const RESULTS_DATA = [
+  // Exemplo de cadastro:
+  // { championship: 'Nome do campeonato', points: 100, kills: 60, placement: 1, image: 'https://i.imgur.com/ID_DA_IMAGEM.png' }
+];
+const resultsTrack = document.getElementById('results-track');
+const resultsCounter = document.getElementById('results-counter');
+const resultsPrev = document.querySelector('.results-prev');
+const resultsNext = document.querySelector('.results-next');
+if (resultsTrack && resultsCounter && resultsPrev && resultsNext) {
+  let resultIndex = 0;
+  const renderResult = () => {
+    if (!RESULTS_DATA.length) {
+      resultsCounter.textContent = '0 RESULTADOS';
+      resultsPrev.disabled = true;
+      resultsNext.disabled = true;
+      return;
+    }
+    const item = RESULTS_DATA[resultIndex];
+    const slide = document.createElement('article');
+    slide.className = 'results-slide';
+    const info = document.createElement('div');
+    info.className = 'results-info';
+    const camp = document.createElement('div');
+    camp.className = 'results-camp';
+    camp.textContent = item.championship;
+    info.appendChild(camp);
+    [['PONTOS', item.points], ['ABATES', item.kills], ['COLOCAÇÃO', item.placement]].forEach(([label, value]) => {
+      const stat = document.createElement('div');
+      stat.className = 'results-stat';
+      const name = document.createElement('span');
+      name.className = 'results-label';
+      name.textContent = label;
+      const number = document.createElement('strong');
+      number.className = 'results-value';
+      number.textContent = value;
+      stat.append(name, number);
+      info.appendChild(stat);
+    });
+    const image = document.createElement('img');
+    image.className = 'results-image';
+    image.src = item.image;
+    image.alt = 'Tabela de resultados - ' + item.championship;
+    image.loading = 'lazy';
+    slide.append(info, image);
+    resultsTrack.replaceChildren(slide);
+    resultsCounter.textContent = String(resultIndex + 1).padStart(2, '0') + ' / ' + String(RESULTS_DATA.length).padStart(2, '0');
+    resultsPrev.disabled = RESULTS_DATA.length < 2;
+    resultsNext.disabled = RESULTS_DATA.length < 2;
+  };
+  resultsPrev.addEventListener('click', () => {
+    if (!RESULTS_DATA.length) return;
+    resultIndex = (resultIndex - 1 + RESULTS_DATA.length) % RESULTS_DATA.length;
+    renderResult();
+  });
+  resultsNext.addEventListener('click', () => {
+    if (!RESULTS_DATA.length) return;
+    resultIndex = (resultIndex + 1) % RESULTS_DATA.length;
+    renderResult();
+  });
+  renderResult();
+}
