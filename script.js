@@ -113,6 +113,15 @@ if (introScreen) {
 // Para publicar um novo campeonato, adicione um item a RESULTS_DATA com a imagem da tabela.
 const RESULTS_DATA = [
   {
+    championship: 'COPA BRASIL (CLASSIFICATÓRIA)',
+    placement: 1,
+    booyahs: 4,
+    points: 271,
+    kills: 183,
+    image: 'https://i.imgur.com/vXgeBHf.jpg',
+    source: 'https://imgur.com/vXgeBHf'
+  },
+  {
     championship: 'COPA AKATSUKI (SEMI FINAL)',
     points: 99,
     kills: 66,
@@ -142,7 +151,7 @@ if (resultsTrack && resultsCounter && resultsPrev && resultsNext) {
     camp.className = 'results-camp';
     camp.textContent = item.championship;
     info.appendChild(camp);
-    [['PONTOS', item.points], ['ABATES', item.kills], ...(item.placement != null ? [['COLOCAÇÃO', item.placement]] : [])].forEach(([label, value]) => {
+    [['PONTOS', item.points], ['ABATES', item.kills], ...(item.placement != null ? [['COLOCAÇÃO', item.placement]] : []), ...(item.booyahs != null ? [['BOOYAHS', item.booyahs]] : [])].forEach(([label, value]) => {
       const stat = document.createElement('div');
       stat.className = 'results-stat';
       const name = document.createElement('span');
@@ -159,6 +168,24 @@ if (resultsTrack && resultsCounter && resultsPrev && resultsNext) {
     image.src = item.image;
     image.alt = 'Tabela de resultados - ' + item.championship;
     image.loading = 'lazy';
+    image.addEventListener('error', () => {
+      const extensions = ['.png', '.jpeg', '.webp', '.gif'];
+      let attempt = 0;
+      const tryNext = () => {
+        if (attempt < extensions.length) {
+          image.src = 'https://i.imgur.com/vXgeBHf' + extensions[attempt++];
+        } else {
+          const link = document.createElement('a');
+          link.href = item.source;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.textContent = 'ABRIR COMPROVANTE NO IMGUR ↗';
+          link.className = 'results-image-fallback';
+          image.replaceWith(link);
+        }
+      };
+      tryNext();
+    }, { once: true });
     slide.append(info, image);
     resultsTrack.replaceChildren(slide);
     resultsCounter.textContent = String(resultIndex + 1).padStart(2, '0') + ' / ' + String(RESULTS_DATA.length).padStart(2, '0');
