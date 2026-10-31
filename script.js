@@ -79,3 +79,28 @@ if (confirmedTrack) {
   updateConfirmedCounter();
   requestAnimationFrame(() => goToConfirmed(0));
 }
+
+
+// Anima as seções quando entram na tela e exibe a abertura da ON7 uma vez por carregamento.
+document.documentElement.classList.add('js-motion');
+const revealItems = document.querySelectorAll('.section, .nation-section, .contact');
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealItems.forEach(item => {
+    item.classList.add('reveal-ready');
+    revealObserver.observe(item);
+  });
+}
+const introScreen = document.getElementById('on7-intro-screen');
+if (introScreen) {
+  const finishIntro = () => introScreen.classList.add('is-done');
+  window.setTimeout(finishIntro, 1450);
+  introScreen.addEventListener('click', finishIntro, { once: true });
+}
