@@ -326,3 +326,19 @@ body{overflow-x:hidden}
 @media(prefers-reduced-motion:reduce){
   .on7-cursor{display:none!important}
 }
+
+
+/* ON7 VISUAL TEST v2 — efeitos mais fáceis de perceber no computador. */
+@media (hover:hover) and (pointer:fine){
+ html.on7-custom-cursor-ready,html.on7-custom-cursor-ready *{cursor:none!important}
+ .on7-cursor{width:34px;height:34px;border:2px solid #fff;box-shadow:0 0 10px rgba(255,255,255,.5),inset 0 0 8px rgba(255,255,255,.12);background:rgba(255,255,255,.035)}
+ .on7-cursor:before{content:"";position:absolute;width:5px;height:5px;border-radius:50%;background:#fff;box-shadow:0 0 8px #fff}
+ .on7-cursor:after{content:none}
+ .on7-cursor.is-hovering{width:52px;height:52px;background:rgba(255,255,255,.13);box-shadow:0 0 22px rgba(255,255,255,.7)}
+ body:after{content:"";position:fixed;inset:0;z-index:4;pointer-events:none;background:radial-gradient(260px circle at var(--on7-mouse-x,50%) var(--on7-mouse-y,50%),rgba(255,255,255,.075),transparent 72%)}
+}
+.player-instagram{border-color:#666;box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)}
+.player-instagram:hover{border-color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.18),0 0 24px rgba(255,255,255,.14),0 14px 30px #000b}
+.nav a{position:relative}
+.nav a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:#fff;transition:right .25s ease}
+.nav a:hover:after{right:0}
