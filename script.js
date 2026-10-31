@@ -210,7 +210,13 @@ if (resultsTrack && resultsCounter && resultsPrev && resultsNext) {
 
 // Carrossel de parcerias oficiais da ON7.
 // Para adicionar uma parceria, inclua nome, imagem e Instagram neste array.
-const PARTNERSHIPS_DATA = [];
+const PARTNERSHIPS_DATA = [
+  {
+    name: 'IMPERIAL LEAGUE',
+    image: 'https://i.imgur.com/sWc6Yr4.png',
+    instagram: 'https://www.instagram.com/imperialleagueoficial/'
+  }
+];
 const partnershipsTrack = document.getElementById('partnerships-track');
 const partnershipsCounter = document.getElementById('partnerships-counter');
 const partnershipsPrev = document.querySelector('.partnerships-prev');
