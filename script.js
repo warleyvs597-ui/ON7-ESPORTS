@@ -1,7 +1,7 @@
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));document.getElementById('year').textContent=new Date().getFullYear();
 
 // Carrossel de artes dos campeonatos confirmados.
-const CONFIRMED_IMG_IDS = ["4iDcXaW","scMFioT","ottZ3o1","RmhkK2D","mALwmlM","OyRH9vT","MyAxnNa","70patZ9","K7lbF3E","c43xH8K","TADyGwt","rZIZDKl","q6JEE3W","AGgwL04","PxT3Drm","weGMpAR","M9NGPs9"];
+const CONFIRMED_IMG_IDS = ["4iDcXaW","scMFioT","ottZ3o1","RmhkK2D","mALwmlM","OyRH9vT","MyAxnNa","70patZ9","K7lbF3E","c43xH8K","TADyGwt","rZIZDKl","q6JEE3W","AGgwL04","PxT3Drm","weGMpAR","M9NGPs9","yZMGyEB","33NZuOW","vvPNwYW"];
 const confirmedTrack = document.getElementById('confirmed-track');
 const confirmedCounter = document.getElementById('confirmed-counter');
 if (confirmedTrack) {
