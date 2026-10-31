@@ -104,3 +104,33 @@ if (introScreen) {
   window.setTimeout(finishIntro, 1450);
   introScreen.addEventListener('click', finishIntro, { once: true });
 }
+
+
+// TESTE VISUAL ON7 — cursor circular minimalista para mouse (não aparece em telas touch).
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const on7Cursor = document.createElement('div');
+  on7Cursor.className = 'on7-cursor';
+  on7Cursor.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(on7Cursor);
+  document.documentElement.classList.add('on7-custom-cursor-ready');
+
+  window.addEventListener('pointermove', event => {
+    on7Cursor.style.transform = 'translate3d(' + event.clientX + 'px,' + event.clientY + 'px,0) translate(-50%,-50%)';
+    on7Cursor.classList.add('is-active');
+  }, { passive: true });
+
+  document.addEventListener('pointerover', event => {
+    if (event.target.closest('a, button, [role="button"]')) {
+      on7Cursor.classList.add('is-hovering');
+    }
+  });
+  document.addEventListener('pointerout', event => {
+    if (event.target.closest('a, button, [role="button"]') &&
+        !event.relatedTarget?.closest('a, button, [role="button"]')) {
+      on7Cursor.classList.remove('is-hovering');
+    }
+  });
+  document.addEventListener('pointerleave', () => on7Cursor.classList.remove('is-active'));
+  document.addEventListener('pointerenter', () => on7Cursor.classList.add('is-active'));
+}
