@@ -455,3 +455,76 @@ html.on7-custom-cursor-ready,html.on7-custom-cursor-ready *{cursor:auto!importan
   }
   .partnerships-image{max-height:136px}
 }
+
+
+/* Parcerias: manter o cartão original e exibir a arte sem moldura preta,
+   com escala visual semelhante às imagens do carrossel Confirmados. */
+.partnerships-slide{
+  max-width:850px;
+  grid-template-columns:minmax(220px,.9fr) minmax(0,1fr);
+  gap:28px;
+  align-items:center;
+  padding:24px;
+  text-align:left;
+}
+.partnerships-image-wrap{
+  width:auto;
+  height:auto;
+  min-height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+  background:transparent;
+  border:0;
+}
+.partnerships-image{
+  display:block;
+  width:auto;
+  height:clamp(300px,38vw,420px);
+  max-height:420px;
+  max-width:100%;
+  object-fit:contain;
+  background:transparent;
+  border:0;
+}
+.partnerships-info{
+  width:auto;
+  align-items:flex-start;
+  gap:22px;
+}
+.partnerships-message{
+  text-align:left;
+  font-size:clamp(20px,2.6vw,30px);
+}
+@media(max-width:620px){
+  .partnerships-slide{
+    grid-template-columns:1fr;
+    padding:15px;
+    gap:18px;
+    text-align:center;
+  }
+  .partnerships-image-wrap{
+    width:100%;
+    height:auto;
+    min-height:0;
+    padding:0;
+  }
+  .partnerships-image{
+    width:auto;
+    height:auto;
+    max-height:68vh;
+    max-width:calc(100vw - 92px);
+    object-fit:contain;
+  }
+  .partnerships-info{
+    width:100%;
+    align-items:center;
+    gap:15px;
+  }
+  .partnerships-message{
+    text-align:center;
+    font-size:21px;
+  }
+  .partnerships-instagram{width:100%;padding:0 10px}
+}
