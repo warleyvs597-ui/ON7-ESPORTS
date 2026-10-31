@@ -112,8 +112,13 @@ if (introScreen) {
 // Carrossel dos resultados oficiais da Team ON7.
 // Para publicar um novo campeonato, adicione um item a RESULTS_DATA com a imagem da tabela.
 const RESULTS_DATA = [
-  // Exemplo de cadastro:
-  // { championship: 'Nome do campeonato', points: 100, kills: 60, placement: 1, image: 'https://i.imgur.com/ID_DA_IMAGEM.png' }
+  {
+    championship: 'COPA AKATSUKI (SEMI FINAL)',
+    points: 99,
+    kills: 66,
+    image: 'https://i.imgur.com/iZdKRMw.png',
+    source: 'https://imgur.com/iZdKRMw'
+  }
 ];
 const resultsTrack = document.getElementById('results-track');
 const resultsCounter = document.getElementById('results-counter');
@@ -137,7 +142,7 @@ if (resultsTrack && resultsCounter && resultsPrev && resultsNext) {
     camp.className = 'results-camp';
     camp.textContent = item.championship;
     info.appendChild(camp);
-    [['PONTOS', item.points], ['ABATES', item.kills], ['COLOCAÇÃO', item.placement]].forEach(([label, value]) => {
+    [['PONTOS', item.points], ['ABATES', item.kills], ...(item.placement != null ? [['COLOCAÇÃO', item.placement]] : [])].forEach(([label, value]) => {
       const stat = document.createElement('div');
       stat.className = 'results-stat';
       const name = document.createElement('span');
