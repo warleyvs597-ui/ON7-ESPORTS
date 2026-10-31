@@ -134,3 +134,12 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
   document.addEventListener('pointerleave', () => on7Cursor.classList.remove('is-active'));
   document.addEventListener('pointerenter', () => on7Cursor.classList.add('is-active'));
 }
+
+
+// Iluminação suave que acompanha o mouse no desktop.
+if(window.matchMedia('(hover:hover) and (pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+ document.addEventListener('pointermove',event=>{
+  document.documentElement.style.setProperty('--on7-mouse-x',event.clientX+'px');
+  document.documentElement.style.setProperty('--on7-mouse-y',event.clientY+'px');
+ },{passive:true});
+}
