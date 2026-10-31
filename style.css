@@ -350,3 +350,9 @@ body{overflow-x:hidden}
   background:radial-gradient(260px circle at var(--on7-mouse-x,-1000px) var(--on7-mouse-y,-1000px),rgba(255,255,255,.075),transparent 72%);
  }
 }
+
+
+/* ON7: remover completamente o brilho e o cursor personalizado do mouse. */
+body:after{content:none!important;display:none!important;background:none!important}
+.on7-cursor{display:none!important}
+html.on7-custom-cursor-ready,html.on7-custom-cursor-ready *{cursor:auto!important}
