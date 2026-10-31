@@ -123,6 +123,7 @@ const RESULTS_DATA = [
   },
   {
     championship: 'COPA AKATSUKI (SEMI FINAL)',
+    placement: 1,
     points: 99,
     kills: 66,
     image: 'https://i.imgur.com/iZdKRMw.png',
